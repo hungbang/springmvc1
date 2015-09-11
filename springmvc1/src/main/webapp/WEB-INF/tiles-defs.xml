@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- defined a base layout -->
+	<definition name="baseLayout" template="/WEB-INF/tiles/baselayout.jsp">
+		<put-attribute name="title" value="Template"/>
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp"/>
+		<put-attribute name="menu" value="/WEB-INF/tiles/menu.jsp"/>
+		<put-attribute name="body" value=""/>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
+		<put-list-attribute name="style">
+			<add-attribute value="/WEB-INF/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+			<add-attribute value="/WEB-INF/bootstrap/3.3.5/css/bootstrap.min.css"/>
+			<add-attribute value="/WEB-INF/css/style.css"/>
+		</put-list-attribute>
+		<put-list-attribute name="script">
+			<add-attribute value="/WEB-INF/bootstrap/3.3.5/js/bootstrap.min.js"/>
+		</put-list-attribute>
+	</definition>
+	
+	<!-- defined a tiles view Home -->
+	<definition name="home.tile" extends="baseLayout">
+		<put-attribute name="tiles" value="HOME"/>
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
+	</definition>
+</tiles-definitions>
